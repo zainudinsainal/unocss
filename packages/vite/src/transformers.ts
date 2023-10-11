@@ -13,7 +13,7 @@ export function createTransformerPlugins(ctx: UnocssPluginContext): Plugin[] {
     transformIndexHtml: {
       enforce: enforce === 'default' ? undefined : enforce,
       transform(code) {
-        return applyTransformers(ctx, code, 'index.html', enforce)
+        return applyTransformers(ctx, code, 'dev-server-index.html', enforce)
           .then(t => t?.code)
       },
     },
